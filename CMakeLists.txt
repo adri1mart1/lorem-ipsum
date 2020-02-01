@@ -1,0 +1,24 @@
+
+cmake_minimum_required(VERSION 3.5)
+
+install(FILES 
+        ${CMAKE_CURRENT_SOURCE_DIR}/sh-reader.sh
+        ${CMAKE_CURRENT_SOURCE_DIR}/sh-writer.sh
+    DESTINATION
+        bin
+    PERMISSIONS 
+        OWNER_EXECUTE OWNER_WRITE OWNER_READ GROUP_EXECUTE GROUP_WRITE GROUP_READ WORLD_EXECUTE)
+
+install(FILES 
+        ${CMAKE_CURRENT_SOURCE_DIR}/lorem-ipsum.txt
+    DESTINATION 
+        /var/meli
+    PERMISSIONS 
+        OWNER_EXECUTE OWNER_WRITE OWNER_READ GROUP_WRITE GROUP_READ)
+
+install(FILES 
+        ${CMAKE_CURRENT_SOURCE_DIR}/sh-reader-writer.config
+    DESTINATION 
+        /etc/meli
+    PERMISSIONS 
+        OWNER_EXECUTE OWNER_WRITE OWNER_READ GROUP_WRITE GROUP_READ)
